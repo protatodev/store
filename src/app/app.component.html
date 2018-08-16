@@ -1,0 +1,5 @@
+<app-add-item (addItem)="createItem($event)"></app-add-item>
+
+<app-list-items [childItemsList]="masterItemsList" (clickSender)="editItem($event)"></app-list-items>
+
+<app-edit-item [childSelectedItem]="selectedItem" (clickedDone)="finishedEditing()"></app-edit-item>

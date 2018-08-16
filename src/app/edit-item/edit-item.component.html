@@ -1,0 +1,16 @@
+<div *ngIf="childSelectedItem">
+  <h3>{{childSelectedItem.name}}</h3>
+  <p>Task Complete? {{childSelectedItem.done}}</p>
+  <h3>Edit Task</h3>
+  <form>
+    <div class="form-group">
+      <label>Enter Task Name:</label>
+      <input class="form-control" name="name" [(ngModel)]="childSelectedItem.name">
+      <label>Enter Task Price:</label>
+      <input class="form-control" name="price" [(ngModel)]="childSelectedItem.price">
+      <label>Enter Task Qty:</label>
+      <input class="form-control" name="qty" [(ngModel)]="childSelectedItem.qty">
+    </div>
+  </form>
+  <button (click)="finishedEditing()">Done</button>
+</div>

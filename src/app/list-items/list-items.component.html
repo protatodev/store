@@ -1,0 +1,10 @@
+<div class="card-group">
+  <div class="card" *ngFor="let item of childItemsList">
+    <div class="card-body">
+      <h4 class="card-title">{{ item.name }}</h4>
+      <p class="card-text">Price: ${{ item.price }}</p>
+      <p class="card-text">On Hand: {{ item.qty }}</p>
+      <button class="btn btn-info" (click)="editButtonClicked(item)">Edit</button>
+    </div>
+  </div>
+</div>

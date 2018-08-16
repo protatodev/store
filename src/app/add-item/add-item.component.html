@@ -1,0 +1,14 @@
+<div class="jumbotron">
+  <h2>Add New Item</h2>
+  <form>
+    <div class="form-group">
+      <label for="name">Enter Item Name</label>
+      <input name="name" class="form-control" type="text" [(ngModel)]="name">
+      <label for="price">Enter Price</label>
+      <input name="price" class="form-control" type="number" [(ngModel)]="price">
+      <label for="qty">Enter Stock Quantity</label>
+      <input name="qty" class="form-control" type="number" [(ngModel)]="qty">
+    </div>
+  </form>
+  <button class="btn btn-primary" [disabled]="assignedValues()" (click)="createNewItem(); resetValues();">Create</button>
+</div>
